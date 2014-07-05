@@ -15,14 +15,14 @@ namespace Server
             var volumeUp = new ContextEntry()
             {
                 Name = "Up",
-                Icon = "speaker-volume-up",
+                Icon = "speaker-volume-control-up",
                 ClickedCallback = VolumeUpCallBack
             };
 
             var volumeDown = new ContextEntry()
             {
                 Name = "Down",
-                Icon = "speaker-volume-none",
+                Icon = "speaker-volume-control",
                 ClickedCallback = VolumeDownCallBack
             };
 

@@ -10,7 +10,8 @@ namespace Client
     {
         Dictionary<Commands, PacketProcessor> Packets = new Dictionary<Commands, PacketProcessor>
         {
-            {Commands.Monitor, new MonitorProcessor()}
+            {Commands.Monitor, new MonitorProcessor()},
+            {Commands.Volume, new VolumeProcessor()}
         };
     }
 }
