@@ -36,6 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Network\Headers\Commands.cs" />
+    <Compile Include="Network\Headers\Volume.cs" />
     <Compile Include="Network\Headers\Monitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

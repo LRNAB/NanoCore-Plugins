@@ -14,10 +14,10 @@ namespace Client.Network.Packets
             switch ((Monitor)parameters[1])
             {
                 case Monitor.TurnOff:
-                    SetMonitorInState(MonitorState.MonitorStateOff);
+                    SetMonitorInState(NativeMethods.MonitorState.MonitorStateOff);
                     break;
                 case Monitor.TurnOn:
-                    SetMonitorInState(MonitorState.MonitorStateOn);
+                    SetMonitorInState(NativeMethods.MonitorState.MonitorStateOn);
                     break;
                 case Monitor.Rotate90CW:
                     RotateScreen();
@@ -69,21 +69,9 @@ namespace Client.Network.Packets
             }
         }
 
-        private void SetMonitorInState(MonitorState state)
+        private void SetMonitorInState(NativeMethods.MonitorState state)
         {
-            NativeMethods.SendMessage(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, (int)state);
-        }
-
-        const int HWND_BROADCAST = 0xffff;
-        const int SC_MONITORPOWER = 0xF170;
-        const int WM_SYSCOMMAND = 0x0112;
-
-        public enum MonitorState
-        {
-            MonitorStateOn = -1,
-            MonitorStateOff = 2,
-            MonitorStateStandBy = 1
-        }
-
+            NativeMethods.SendMessage(NativeMethods.HWND_BROADCAST, NativeMethods.WM_SYSCOMMAND, NativeMethods.SC_MONITORPOWER, (int)state);
+        }        
     }
 }

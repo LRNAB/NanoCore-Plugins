@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClientPlugin">
-      <HintPath>..\..\..\..\..\Desktop\Nanocore\ClientPlugin.dll</HintPath>
+    <Reference Include="ClientPlugin, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NanoCore Libraries\ClientPlugin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -44,13 +45,17 @@
     <Compile Include="..\Shared\Network\Headers\Monitor.cs">
       <Link>Network\Headers\Monitor.cs</Link>
     </Compile>
+    <Compile Include="..\Shared\Network\Headers\Volume.cs">
+      <Link>Network\Headers\Volume.cs</Link>
+    </Compile>
     <Compile Include="Core\NativeMethods.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Main.Packets.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Network\Packets\IPacket.cs" />
-    <Compile Include="Network\Packets\Monitor.cs" />
+    <Compile Include="Network\Packets\PacketProcessor.cs" />
+    <Compile Include="Network\Packets\MonitorProcessor.cs" />
+    <Compile Include="Network\Packets\VolumeProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

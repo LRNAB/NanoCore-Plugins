@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Network.Headers
 {
-    enum Monitor : byte
+    enum Volume : byte
     {
-        TurnOff = 1,
-        TurnOn = 2,
-        Rotate90CW = 3,
+        Up = 1,
+        Down = 2,
+        Mute = 3
     }
 }

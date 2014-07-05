@@ -5,16 +5,16 @@ using System.Text;
 
 namespace Client.Core
 {
-    class NativeMethods
+    public class NativeMethods
     {
         [DllImport("user32.dll", EntryPoint = "SendMessageA")]
-        internal static extern void SendMessage(int hWnd, int uMsg, int wParam, int lParam);
+        public static extern void SendMessage(int hWnd, int uMsg, int wParam, int lParam);
 
         [DllImport("user32.dll", CharSet = CharSet.Ansi)]
-        public static extern int EnumDisplaySettings(string lpszDeviceName, int iModeNum, ref DEVMODE lpDevMode);
+        internal static extern int EnumDisplaySettings(string lpszDeviceName, int iModeNum, ref DEVMODE lpDevMode);
 
         [DllImport("user32.dll")]
-        public static extern int ChangeDisplaySettings(ref DEVMODE lpDevMode, int dwFlags);
+        internal static extern int ChangeDisplaySettings(ref DEVMODE lpDevMode, int dwFlags);
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public struct DEVMODE
@@ -67,12 +67,25 @@ namespace Client.Core
             BadParam = -5,
             BadDualView = -6
         }
+        public enum MonitorState
+        {
+            MonitorStateOn = -1,
+            MonitorStateOff = 2,
+            MonitorStateStandBy = 1
+        }
 
         public const int ENUM_CURRENT_SETTINGS = -1;
         public const int DMDO_DEFAULT = 0;
         public const int DMDO_90 = 1;
         public const int DMDO_180 = 2;
         public const int DMDO_270 = 3;
+        public const int APPCOMMAND_VOLUME_MUTE = 0x80000;
+        public const int APPCOMMAND_VOLUME_UP = 0xA0000;
+        public const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+        public const int WM_APPCOMMAND = 0x319;
+        public const int HWND_BROADCAST = 0xffff;
+        public const int SC_MONITORPOWER = 0xF170;
+        public const int WM_SYSCOMMAND = 0x0112;       
 
     }
 }

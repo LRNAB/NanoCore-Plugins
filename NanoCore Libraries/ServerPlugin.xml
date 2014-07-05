@@ -1,0 +1,641 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ServerPlugin
+</name>
+</assembly>
+<members>
+<member name="P:NanoCore.IServerClient.Id">
+	<summary>
+ Gets the unique machine identifier for this client.
+ </summary>
+	<value>
+ The unique machine identifier.
+ </value>
+</member><member name="P:NanoCore.IServerClient.EndPoint">
+	<summary>
+ Gets the client's remote address and local port.
+ </summary>
+	<value>
+ The IPEndPoint representing the clients remote address and local port.
+ </value>
+</member><member name="P:NanoCore.IServerClient.Variables">
+	<summary>
+ Gets shared variables.
+ </summary>
+	<value>
+ The shared variables.
+ </value>
+</member><member name="P:NanoCore.IServerClient.State">
+	<summary>
+ Gets or sets a state object for the client.
+ </summary>
+	<value>
+ The state object.
+ </value>
+</member><member name="T:NanoCore.IServerClient">
+	<summary>
+ Represents a client connection to the server.
+ </summary>
+</member><member name="P:NanoCore.ISQLReader.Item(System.String)">
+	<summary>
+ Retrieves the column with the specified name.
+ </summary>
+	<value>
+ The column's value.
+ </value>
+</member><member name="P:NanoCore.ISQLReader.Item(System.Int32)">
+	<summary>
+ Retrieves the column at the specified index.
+ </summary>
+	<value>
+ The column's value.
+ </value>
+</member><member name="M:NanoCore.ISQLReader.NextRecord">
+	<summary>
+ Advances the reader to the next record.
+ </summary>
+	<returns></returns>
+</member><member name="M:NanoCore.ISQLReader.NextResultSet">
+	<summary>
+ Advances the reader to the next result set.
+ </summary>
+	<returns></returns>
+</member><member name="M:NanoCore.ISQLReader.Close">
+	<summary>
+ Closes the reader and releases any resources associated with it.
+ </summary>
+</member><member name="T:NanoCore.ISQLReader">
+	<summary>
+ Represents a reader for an SQLite query result.
+ </summary>
+</member><member name="F:NanoCore.WidgetEntry.Name">
+	<summary>
+ The name used to identify the entry.
+ </summary>
+</member><member name="F:NanoCore.WidgetEntry.UserControl">
+	<summary>
+ The control used for the entry.
+ </summary>
+</member><member name="F:NanoCore.WidgetEntry.StateChangedCallback">
+	<summary>
+ Delegate to be invoked when the widget state has changed.
+ </summary>
+</member><member name="T:NanoCore.WidgetEntry">
+	<summary>
+ Represents a widget entry.
+ </summary>
+</member><member name="F:NanoCore.TabEntry.CategoryName">
+	<summary>
+ The category name for the entry.
+ </summary>
+</member><member name="F:NanoCore.TabEntry.SubCategoryName">
+	<summary>
+ The sub category name for the entry.
+ </summary>
+</member><member name="F:NanoCore.TabEntry.SubCategoryIcon">
+	<summary>
+ The sub category icon for the entry.
+ </summary>
+</member><member name="F:NanoCore.TabEntry.Name">
+	<summary>
+ The name of the child tab page.
+ </summary>
+</member><member name="F:NanoCore.TabEntry.Icon">
+	<summary>
+ The icon of the child tab page.
+ </summary>
+</member><member name="F:NanoCore.TabEntry.UserControl">
+	<summary>
+ The control used for the entry.
+ </summary>
+</member><member name="F:NanoCore.TabEntry.StateChangedCallback">
+	<summary>
+ Delegate to be invoked when the tab state has changed.
+ </summary>
+</member><member name="T:NanoCore.TabEntry">
+	<summary>
+ Represents a tab page entry.
+ </summary>
+</member><member name="F:NanoCore.ContextEntry.Name">
+	<summary>
+ The name of the context menu item.
+ </summary>
+</member><member name="F:NanoCore.ContextEntry.Icon">
+	<summary>
+ The icon of the context menu item.
+ </summary>
+</member><member name="F:NanoCore.ContextEntry.Children">
+	<summary>
+ The child context menu items of this item.
+ </summary>
+</member><member name="F:NanoCore.ContextEntry.ClickedCallback">
+	<summary>
+ Delegate to be invoked when the item has been clicked.
+ </summary>
+</member><member name="F:NanoCore.ContextEntry.GetCheckStateCallback">
+	<summary>
+ Delegate to be invoked when querying the check state of the item. If this is set the context menu item will act as a checkbox instead of a button.
+ </summary>
+</member><member name="T:NanoCore.ContextEntry">
+	<summary>
+ Represents a context menu item entry.
+ </summary>
+</member><member name="F:NanoCore.ColumnEntry.Name">
+	<summary>
+ The name of the column.
+ </summary>
+</member><member name="F:NanoCore.ColumnEntry.Icon">
+	<summary>
+ The icon used for the column.
+ </summary>
+</member><member name="F:NanoCore.ColumnEntry.Width">
+	<summary>
+ The default width of the column.
+ </summary>
+</member><member name="T:NanoCore.ColumnEntry">
+	<summary>
+ Represents a connection list column entry.
+ </summary>
+</member><member name="F:NanoCore.SettingEntry.CategoryName">
+	<summary>
+ The category name used for the entry.
+ </summary>
+</member><member name="F:NanoCore.SettingEntry.UserControl">
+	<summary>
+ The control used for the entry.
+ </summary>
+</member><member name="T:NanoCore.SettingEntry">
+	<summary>
+ Represents a builder or server setting control entry.
+ </summary>
+</member><member name="F:NanoCore.ColorScheme.Normal">
+	<summary>
+ Indicates a standard log entry.
+ </summary>
+</member><member name="F:NanoCore.ColorScheme.Warning">
+	<summary>
+ Indicates a warning log entry.
+ </summary>
+</member><member name="F:NanoCore.ColorScheme.Error">
+	<summary>
+ Indicates an error log entry.
+ </summary>
+</member><member name="F:NanoCore.ColorScheme.Information">
+	<summary>
+ Indicates an important log entry.
+ </summary>
+</member><member name="T:NanoCore.ColorScheme">
+	<summary>
+ Indicates the color of a log entry.
+ </summary>
+</member><member name="F:NanoCore.TabState.Selected">
+	<summary>
+ Indicates the tab is selected.
+ </summary>
+</member><member name="F:NanoCore.TabState.Deselected">
+	<summary>
+ Indicates the tab is not selected.
+ </summary>
+</member><member name="T:NanoCore.TabState">
+	<summary>
+ Indicates the current state of a tab page.
+ </summary>
+</member><member name="M:NanoCore.IServerNameObjectCollection.EntryExists(System.String)">
+	<summary>
+ Determines if an entry with the provided name currently exists.
+ </summary>
+	<param name="name">Name of the entry.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.IServerNameObjectCollection.GetEntries">
+	<summary>
+ Gets all of the current entries.
+ </summary>
+	<returns></returns>
+</member><member name="M:NanoCore.IServerNameObjectCollection.GetValue(System.String,System.Object)">
+	<summary>
+ Gets the value of an entry.
+ </summary>
+	<param name="name">Name of the entry.</param>
+	<param name="defaultValue">Fall back value in case the specified item does not exist.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.IServerNameObjectCollection.SetValue(System.String,System.Object)">
+	<summary>
+ Sets the value of an entry.
+ </summary>
+	<param name="name">Name of the entry.</param>
+	<param name="value">Value to set for the entry.</param>
+</member><member name="M:NanoCore.IServerNameObjectCollection.RemoveValue(System.String)">
+	<summary>
+ Removes an entry.
+ </summary>
+	<param name="name">Name of the entry.</param>
+</member><member name="T:NanoCore.IServerNameObjectCollection">
+	<summary>
+ Represents a collection of keys and values.
+ </summary>
+</member><member name="T:NanoCore.ServerInvokeDelegate">
+	<summary>
+ Represents the method that is called in the servers's thread context.
+ </summary>
+	<param name="state">State object passed to the method when invoked.</param>
+</member><member name="T:NanoCore.TabStateChangedDelegate">
+	<summary>
+ Represents the method that is called when a tab state has changed.
+ </summary>
+	<param name="state">The tab state that is being changed.</param>
+</member><member name="T:NanoCore.ContextClickedDelegate">
+	<summary>
+ Represents the method that is called when a context menu item has been clicked.
+ </summary>
+	<param name="clients">The selected clients to invoke the command on.</param>
+	<param name="checked"><c>True</c> if the command has been enabled; otherwise, <c>false</c>.</param>
+</member><member name="T:NanoCore.NotificationDelegate">
+	<summary>
+ Represents the method that is called when a notification action is invoked.
+ </summary>
+	<param name="client">The client that the notification represents or null if called by a server notification.</param>
+	<param name="state">State object passed to the notification when created.</param>
+</member><member name="T:NanoCore.ContextGetCheckStateDelegate">
+	<summary>
+ Represents the method that is called when the server is requesting a context menu item's check state.
+ </summary>
+	<param name="clients">The selected clients to query the check state from.</param>
+	<returns></returns>
+</member><member name="F:NanoCore.BuildEventArgs.FileName">
+	<summary>
+ The compiler output file name.
+ </summary>
+</member><member name="F:NanoCore.BuildEventArgs.Cancel">
+	<summary>
+		<c>True</c> to cause the build operation to fail; otherwise, <c>false</c>.
+ </summary>
+</member><member name="F:NanoCore.BuildEventArgs.CancelReason">
+	<summary>
+ The reason provided for canceling the build operation.
+ </summary>
+</member><member name="T:NanoCore.BuildEventArgs">
+	<summary>
+ Provides data for the <see cref="M:NanoCore.ServerPlugin.IServerBuild.PreBuild(NanoCore.BuildEventArgs)"/> and <see cref="M:NanoCore.ServerPlugin.IServerBuild.PostBuild(NanoCore.BuildEventArgs)"/> events.
+ </summary>
+</member><member name="F:NanoCore.NotificationAction.Name">
+	<summary>
+ Name of the action to be executed.
+ </summary>
+</member><member name="F:NanoCore.NotificationAction.Callback">
+	<summary>
+ Delegate to be invoked when this action is executed.
+ </summary>
+</member><member name="T:NanoCore.NotificationAction">
+	<summary>
+ Represents a toast notification action.
+ </summary>
+</member><member name="M:NanoCore.ServerPlugin.IServerData.VariableChanged(System.String)">
+	<summary>
+ Called when a shared variable has been changed.
+ </summary>
+	<param name="name">Name of the variable.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerData.ClientVariableChanged(NanoCore.IServerClient,System.String)">
+	<summary>
+ Called when a client variable has been changed.
+ </summary>
+	<param name="client">Client on which the variable has changed.</param>
+	<param name="name">Name of the variable.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerData.ServerSettingChanged(System.String)">
+	<summary>
+ Called when a server setting has been changed.
+ </summary>
+	<param name="name">Name of the setting.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerData.BuilderSettingChanged(System.String)">
+	<summary>
+ Called when a builder setting has been changed.
+ </summary>
+	<param name="name">Name of the setting.</param>
+</member><member name="T:NanoCore.ServerPlugin.IServerData">
+	<summary>
+ Provides event callbacks for settings and shared variables.
+ </summary>
+</member><member name="M:NanoCore.ServerPlugin.IServerNetwork.ClientStateChanged(NanoCore.IServerClient,System.Boolean)">
+	<summary>
+ Called when a client connection state has changed.
+ </summary>
+	<param name="client">The client which state has changed.</param>
+	<param name="connected"><c>True</c> if connected; otherwise, <c>false</c>.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerNetwork.ClientReadPacket(NanoCore.IServerClient,System.String,System.Object[])">
+	<summary>
+ Called when a packet has been received from a client.
+ </summary>
+	<param name="client">The client that has sent the data.</param>
+	<param name="pipeName">Name of the pipe.</param>
+	<param name="params">Parameters received from the client.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerNetwork.ClientPipeCreated(NanoCore.IServerClient,System.String)">
+	<summary>
+ Called when a connection pipe has been created.
+ </summary>
+	<param name="client">The client which has created a pipe.</param>
+	<param name="pipeName">Name of the pipe.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerNetwork.ClientPipeDestroyed(NanoCore.IServerClient,System.String)">
+	<summary>
+ Called when a connection pipe has been destroyed.
+ </summary>
+	<param name="client">The client which has destroyed a pipe.</param>
+	<param name="pipeName">Name of the pipe.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerNetwork.HostStateChanged(System.UInt16,System.Boolean)">
+	<summary>
+ Called when the server listening state has changed.
+ </summary>
+	<param name="port">The port which state has changed.</param>
+	<param name="listening"><c>True</c> if listening; otherwise, <c>false</c>.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerNetwork.HostListenFailed(System.UInt16)">
+	<summary>
+ Called when a server port has failed to listen.
+ </summary>
+	<param name="port">The port which has failed to listen.</param>
+</member><member name="T:NanoCore.ServerPlugin.IServerNetwork">
+	<summary>
+ Provides event callbacks for connection states and network transfer.
+ </summary>
+</member><member name="M:NanoCore.ServerPlugin.IServerBuild.PreBuild(NanoCore.BuildEventArgs)">
+	<summary>
+ Called before the build operation begins.
+ </summary>
+	<param name="e">The <see cref="T:NanoCore.BuildEventArgs"/> instance containing the event data.</param>
+</member><member name="M:NanoCore.ServerPlugin.IServerBuild.PostBuild(NanoCore.BuildEventArgs)">
+	<summary>
+ Called after the build operation has completed.
+ </summary>
+	<param name="e">The <see cref="T:NanoCore.BuildEventArgs"/> instance containing the event data.</param>
+</member><member name="T:NanoCore.ServerPlugin.IServerBuild">
+	<summary>
+ Provides event callbacks for client build operations.
+ </summary>
+</member><member name="P:NanoCore.ServerPluginHost.IServerDataHost.Variables">
+	<summary>
+ Gets shared variables.
+ </summary>
+	<value>
+ Shared variables.
+ </value>
+</member><member name="P:NanoCore.ServerPluginHost.IServerDataHost.ServerSettings">
+	<summary>
+ Gets server settings.
+ </summary>
+	<value>
+ Server settings.
+ </value>
+</member><member name="P:NanoCore.ServerPluginHost.IServerDataHost.BuilderSettings">
+	<summary>
+ Gets builder settings.
+ </summary>
+	<value>
+ Builder settings.
+ </value>
+</member><member name="T:NanoCore.ServerPluginHost.IServerDataHost">
+	<summary>
+ Provides access to settings and shared variables.
+ </summary>
+</member><member name="P:NanoCore.ServerPluginHost.IServerUIHost.Icon">
+	<summary>
+ Gets the NanoCore form icon.
+ </summary>
+	<value>
+ The NanoCore form icon.
+ </value>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.Activate">
+	<summary>
+ Restores NanoCore and activates the main form.
+ </summary>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.Invoke(NanoCore.ServerInvokeDelegate,System.Object)">
+	<summary>
+ Invokes the specified method on the UI thread.
+ </summary>
+	<param name="target">A <see cref="T:NanoCore.ServerInvokeDelegate"/> to be invoked.</param>
+	<param name="state">A state object to be passed to the specified method.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.ApplyTheme(System.Windows.Forms.Control)">
+	<summary>
+ Applies the NanoCore style to a control and it's children.
+ </summary>
+	<param name="control">The parent control to apply the theme to.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.ShowToastNotification(NanoCore.IServerClient,System.String,System.String,System.String,System.Int32,System.Object,NanoCore.NotificationAction[])">
+	<summary>
+ Shows a toast notification.
+ </summary>
+	<param name="client">The client that this notification belongs to or null for a server notification.</param>
+	<param name="title">The title of the notification.</param>
+	<param name="message">The message to be shown on the notification.</param>
+	<param name="icon">The icon to be shown on the notification.</param>
+	<param name="duration">The duration in milliseconds to show the notification.</param>
+	<param name="state">A state object to be passed to the action callback.</param>
+	<param name="actions">An array of actions the notification supports.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.AddContextEntry(NanoCore.ContextEntry)">
+	<summary>
+ Adds a context entry.
+ </summary>
+	<param name="contextEntry">The context entry to be added.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.AddTabEntry(NanoCore.TabEntry)">
+	<summary>
+ Adds a tab entry.
+ </summary>
+	<param name="tabEntry">The tab entry to be added.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.FocusTab(System.String,System.String,System.String)">
+	<summary>
+ Navigates to a specific tab page.
+ </summary>
+	<param name="categoryName">Name of the main category the tab resides in.</param>
+	<param name="subCategoryName">Name of the sub category the tab resides in.</param>
+	<param name="name">Name of the tab to be focused.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.AddWidgetEntry(NanoCore.WidgetEntry)">
+	<summary>
+ Adds a widget entry.
+ </summary>
+	<param name="widgetEntry">The widget entry to be added.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.FocusClient(NanoCore.IServerClient)">
+	<summary>
+ Navigates to the connections tab and focuses the specified client.
+ </summary>
+	<param name="client">The client to be focused.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.AddClientColumnEntry(NanoCore.ColumnEntry)">
+	<summary>
+ Adds a client column entry.
+ </summary>
+	<param name="columnEntry">The column entry to be added.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.SetClientColumnValue(NanoCore.IServerClient,System.String,System.String,System.String)">
+	<summary>
+ Updates a client column value.
+ </summary>
+	<param name="client">The client to update.</param>
+	<param name="columnName">Name of the column to be updated.</param>
+	<param name="imageName">Name of the image to be applied, or null for no image.</param>
+	<param name="text">The text to be shown on the column.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.AddServerSettingEntry(NanoCore.SettingEntry)">
+	<summary>
+ Adds a server setting entry.
+ </summary>
+	<param name="settingEntry">The setting entry to be added.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerUIHost.AddBuilderSettingEntry(NanoCore.SettingEntry)">
+	<summary>
+ Adds a builder setting entry.
+ </summary>
+	<param name="settingEntry">The setting entry to be added.</param>
+</member><member name="T:NanoCore.ServerPluginHost.IServerUIHost">
+	<summary>
+ Provides access to server UI.
+ </summary>
+</member><member name="P:NanoCore.ServerPluginHost.IServerNetworkHost.ListeningPorts">
+	<summary>
+ Gets an array of all currently listening ports.
+ </summary>
+	<value>
+ Listening ports.
+ </value>
+</member><member name="M:NanoCore.ServerPluginHost.IServerNetworkHost.GetClients">
+	<summary>
+ Gets an array of all currently connected clients.
+ </summary>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerNetworkHost.FindClient(System.Guid)">
+	<summary>
+ Finds a client by it's unique Id.
+ </summary>
+	<param name="id">The client identifier.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerNetworkHost.DisconnectClient(NanoCore.IServerClient)">
+	<summary>
+ Disconnects the specified client.
+ </summary>
+	<param name="client">The client to disconnect.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerNetworkHost.CreateClientPipe(NanoCore.IServerClient,System.String)">
+	<summary>
+ Creates a connection pipe on the specified client.
+ </summary>
+	<param name="client">The client to create a pipe on.</param>
+	<param name="pipeName">Name of the pipe.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerNetworkHost.DestroyClientPipe(NanoCore.IServerClient,System.String)">
+	<summary>
+ Destroys a client's connection pipe.
+ </summary>
+	<param name="client">The client to destroy a pipe on.</param>
+	<param name="pipeName">Name of the pipe.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerNetworkHost.SendToClient(NanoCore.IServerClient,System.String,System.Boolean,System.Object[])">
+	<summary>
+ Sends primitive values to a client.
+ </summary>
+	<param name="client">The client to send values to.</param>
+	<param name="pipeName">Name of a pipe connection. This parameter can be null if no pipe is being used.</param>
+	<param name="compress">Compresses packet data if <c>true</c>. Set to <c>true</c> unless <paramref name="params"/> contains data that has already been compressed.</param>
+	<param name="params">Primitive values to send to the client.</param>
+</member><member name="T:NanoCore.ServerPluginHost.IServerNetworkHost">
+	<summary>
+ Provides access to server networking.
+ </summary>
+</member><member name="M:NanoCore.ServerPluginHost.IServerLoggingHost.LogServerMessage(NanoCore.ColorScheme,System.String)">
+	<summary>
+ Logs a server message.
+ </summary>
+	<param name="logColor">Color of the log entry.</param>
+	<param name="message">The message to be logged.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerLoggingHost.LogServerException(System.Exception,System.String)">
+	<summary>
+ Logs a server exception.
+ </summary>
+	<param name="ex">The exception to be logged.</param>
+	<param name="site">The site or method name in which the exception occurred.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerLoggingHost.LogBuilderMessage(NanoCore.ColorScheme,System.String)">
+	<summary>
+ Logs a builder message.
+ </summary>
+	<param name="logColor">Color of the log entry.</param>
+	<param name="message">The message to be logged.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerLoggingHost.LogBuilderException(System.Exception,System.String)">
+	<summary>
+ Logs a builder exception.
+ </summary>
+	<param name="ex">The exception to be logged.</param>
+	<param name="site">The site or method name in which the exception occurred.</param>
+</member><member name="T:NanoCore.ServerPluginHost.IServerLoggingHost">
+	<summary>
+ Provides access to server logging.
+ </summary>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.CreateDatabase(System.String)">
+	<summary>
+ Creates an SQLite database.
+ </summary>
+	<param name="databaseName">Name of the database.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.DeleteDatabase(System.String)">
+	<summary>
+ Deletes a database.
+ </summary>
+	<param name="databaseName">Name of the database.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.DatabaseExists(System.String)">
+	<summary>
+ Determines whether or not a database exists.
+ </summary>
+	<param name="databaseName">Name of the database.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.TableExists(System.String,System.String)">
+	<summary>
+ Determines whether or not a table exists in a database.
+ </summary>
+	<param name="databaseName">Name of the database.</param>
+	<param name="tableName">Name of the table.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.ExecuteQuery(System.String,System.String)">
+	<summary>
+ Executes a standard SQLite query.
+ </summary>
+	<param name="databaseName">Name of the database.</param>
+	<param name="query">An SQLite query string.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.ExecuteScalar(System.String,System.String)">
+	<summary>
+ Executes a SQLite scalar query.
+ </summary>
+	<param name="databaseName">Name of the database.</param>
+	<param name="query">An SQLite query string.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.ExecuteNonQuery(System.String,System.String)">
+	<summary>
+ Executes an SQLite non-query.
+ </summary>
+	<param name="databaseName">Name of the database.</param>
+	<param name="query">An SQLite query string.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.EscapeSQLParam(System.String)">
+	<summary>
+ Escapes an SQLite query parameter.
+ </summary>
+	<param name="param">The parameter to escape.</param>
+	<returns></returns>
+</member><member name="M:NanoCore.ServerPluginHost.IServerDatabaseHost.EscapeSQLQuery(System.String,System.Object[])">
+	<summary>
+ Escapes an SQLite query string.
+ </summary>
+	<param name="query">A formatted SQLite query string.</param>
+	<param name="params">The parameters to escape and format.</param>
+	<returns></returns>
+</member><member name="T:NanoCore.ServerPluginHost.IServerDatabaseHost">
+	<summary>
+ Provides access to the server's SQLite database functionality.
+ </summary>
+</member><member name="M:NanoCore.ServerPluginHost.IServerTransferHost.UploadFileToClient(NanoCore.IServerClient,System.String,System.String)">
+	<summary>
+ Uploads a file to a client.
+ </summary>
+	<param name="client">The client to upload a file to.</param>
+	<param name="localPath">The local file path.</param>
+	<param name="remotePath">The remote file path.</param>
+</member><member name="M:NanoCore.ServerPluginHost.IServerTransferHost.DownloadFileFromClient(NanoCore.IServerClient,System.String,System.String)">
+	<summary>
+ Downloads a file from a client.
+ </summary>
+	<param name="client">The client to download a file from.</param>
+	<param name="localPath">The local file path.</param>
+	<param name="remotePath">The remote file path.</param>
+</member><member name="T:NanoCore.ServerPluginHost.IServerTransferHost">
+	<summary>
+ Provides access to file transfer functionality between the server and clients.
+ </summary>
+</member>
+</members>
+</doc>

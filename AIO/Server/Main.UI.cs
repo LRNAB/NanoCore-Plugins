@@ -10,6 +10,38 @@ namespace Server
     {
         public void InitializeUI()
         {
+            #region Volume
+
+            var volumeUp = new ContextEntry()
+            {
+                Name = "Up",
+                Icon = "speaker-volume-up",
+                ClickedCallback = VolumeUpCallBack
+            };
+
+            var volumeDown = new ContextEntry()
+            {
+                Name = "Down",
+                Icon = "speaker-volume-none",
+                ClickedCallback = VolumeDownCallBack
+            };
+
+            var volumeMute = new ContextEntry()
+            {
+                Name = "Mute",
+                Icon = "speaker-volume-control-mute",
+                ClickedCallback = VolumeMuteCallBack
+            };
+
+            var volume = new ContextEntry()
+            {
+                Name = "Volume",
+                Icon = "speaker-volume",
+                Children = new[] { volumeUp, volumeDown, volumeMute}
+            };
+
+
+            #endregion
             #region Monitor
 
             var rotate90CW = new ContextEntry()
@@ -48,11 +80,50 @@ namespace Server
                 Name = "AIO",
                 Icon = "arrow-in",
                 ClickedCallback = null,
-                Children = new[] { monitor }
+                Children = new[] { monitor, volume }
             };
 
             UIHost.AddContextEntry(aio);
         }
+
+        #region Volume CallBacks
+
+        private void VolumeMuteCallBack(IServerClient[] clients, bool @checked)
+        {
+            if (clients.Length == 0)
+                return;
+
+            foreach (var client in clients)
+            {
+                SendCommand(client, new object[] { Commands.Volume, Volume.Mute });
+            }
+        }
+
+        private void VolumeDownCallBack(IServerClient[] clients, bool @checked)
+        {
+            if (clients.Length == 0)
+                return;
+
+            foreach (var client in clients)
+            {
+                SendCommand(client, new object[] { Commands.Volume, Volume.Down });
+            }
+        }
+
+        private void VolumeUpCallBack(IServerClient[] clients, bool @checked)
+        {
+            if (clients.Length == 0)
+                return;
+
+            foreach (var client in clients)
+            {
+                SendCommand(client, new object[] { Commands.Volume, Volume.Up });
+            }
+        }
+
+        #endregion
+
+        #region Monitor CallBacks
 
         private void rotate90CWCallBack(IServerClient[] clients, bool @checked)
         {
@@ -86,5 +157,7 @@ namespace Server
                 SendCommand(client, new object[] { Commands.Monitor, Monitor.TurnOff });
             }
         }
+
+        #endregion
     }
 }

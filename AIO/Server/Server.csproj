@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ServerPlugin">
-      <HintPath>..\..\..\..\..\Desktop\Nanocore\ServerPlugin.dll</HintPath>
+    <Reference Include="ServerPlugin, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NanoCore Libraries\ServerPlugin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -44,6 +45,9 @@
     </Compile>
     <Compile Include="..\Shared\Network\Headers\Monitor.cs">
       <Link>Network\Headers\Monitor.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\Network\Headers\Volume.cs">
+      <Link>Network\Headers\Volume.cs</Link>
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="Main.UI.cs">

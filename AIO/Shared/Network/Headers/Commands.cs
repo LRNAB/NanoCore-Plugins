@@ -6,6 +6,7 @@ namespace Network.Headers
 {
     public enum Commands : byte
     {
-        Monitor = 1
+        Monitor = 1,
+        Volume = 2
     }
 }
